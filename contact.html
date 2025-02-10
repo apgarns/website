@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0 20px;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+
+    @font-face {
+      font-family: 'pixel';
+      src: url('pixel.ttf') format('truetype');
+    }
+
+    .title1 {
+      color: #02280b;
+      text-align: center;
+      font-size: 30px;
+      padding: 14px 16px;
+      font-weight: bold;
+      font-variant: italic;
+      font-family: 'pixel', sans-serif;
+    }
+
+    .text1{
+      font-size: 15px;
+    }
+
+    li a {
+      float: right;
+      display: block;
+      border-radius: 0px;
+      color: rgb(165, 157, 157);
+      font-size: 30px;
+      text-align: center;
+      padding: 10px 12px;
+      text-decoration: none;
+      font-family: 'pixel', sans-serif;
+      margin-right: 20px; 
+    }
+
+      li a:hover {
+        background-color:rgb(65, 238, 65);
+        
+        color: rgb(255, 255, 255);
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      body.dark-mode ul {
+        background-color: #121212;
+      }
+
+
+      body.dark-mode .title1 {
+        color: #ffffff;
+      }
+
+      body.dark-mode li a {
+        color: #504e4e;
+      }
+
+      body.dark-mode li a:hover {
+        background-color:rgb(65, 238, 65);
+        color: rgb(255, 255, 255);
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #ffffff;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      body.dark-mode footer {
+        background-color: #121212;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li style="float: right;"><button id="dark-mode-toggle"><img id="mode-icon" src="night.png" alt="Toggle Dark Mode" style="width: 30px; height: 30px;"></button></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1 class="title1" style="text-align: left;">CONTACT</h1>
+    <pre>Contact me here:
+
+      Phone number: 123-456-7890
+      Address: 1305 Frenger St, Las Cruces, New Mexico, 88007
+
+    </pre>
+    <div style="text-align: right;margin-right: 320px">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.163677567706!2d-106.751966!3d32.280577099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86de17bedbf2c18d%3A0x1208f8040b0286d!2sScience%20Hall!5e0!3m2!1sen!2sus!4v1739127991508!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div></div>
+    <footer>
+    <p style="text-align: center; font-family: 'pixel', sans-serif;">&copy; 2025 Alex Garns | All rights reserved.</p>
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById('dark-mode-toggle');
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
+  </body>
+</html>

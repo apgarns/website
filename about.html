@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0 20px;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+
+
+    
+    @font-face {
+      font-family: 'pixel';
+      src: url('pixel.ttf') format('truetype');
+    }
+
+    .title1 {
+      color: #02280b;
+      text-align: center;
+      font-size: 30px;
+      padding: 14px 16px;
+      font-weight: bold;
+      font-variant: italic;
+      font-family: 'pixel', sans-serif;
+    }
+
+    .text1{
+      font-size: 15px;
+    }
+
+    li a {
+      float: right;
+      display: block;
+      border-radius: 0px;
+      color: rgb(165, 157, 157);
+      font-size: 30px;
+      text-align: center;
+      padding: 10px 12px;
+      text-decoration: none;
+      font-family: 'pixel', sans-serif;
+      margin-right: 20px; 
+    }
+
+      li a:hover {
+        background-color:rgb(65, 238, 65);
+        
+        color: rgb(255, 255, 255);
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      body.dark-mode ul {
+        background-color: #121212;
+      }
+
+
+      body.dark-mode .title1 {
+        color: #ffffff;
+      }
+
+      body.dark-mode li a {
+        color: #504e4e;
+      }
+
+      body.dark-mode li a:hover {
+        background-color:rgb(65, 238, 65);
+        color: rgb(255, 255, 255);
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #ffffff;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      body.dark-mode footer {
+        background-color: #121212;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li style="float: right;"><button id="dark-mode-toggle"><img id="mode-icon" src="night.png" alt="Toggle Dark Mode" style="width: 30px; height: 30px;"></button></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1 class="title1" style="text-align: left;">ABOUT</h1>
+    <pre class="text1" style="text-align: left;"> Hello,
+
+      My name is Alex Garns. I am a master student at New Mexico State University.
+
+      I am from a small city, Zamora, Michoacan, MX. I came here to pursue my higher education.
+      and im here im my last year of my master's degree in computer science.
+
+      Beyond the studying and working, I have an interest for adventure. I love immersing myself 
+      in different cultures, exploring new places, and indulging in the thrill of video games. 
+      
+
+    </pre>
+    
+    <img src="me.webp" alt="Alex Garns" style="width: 400px; height: 750px; margin-left: 20px; float: right; margin-top: -240px; margin-right: 80px;">
+
+    
+    <footer>
+    <p style="text-align: center; font-family: 'pixel', sans-serif;">&copy; 2025 Alex Garns | All rights reserved.</p>
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById('dark-mode-toggle');
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
+  </body>
+</html>
