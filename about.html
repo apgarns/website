@@ -2,6 +2,7 @@
 <html>
   <head>
     <style>
+      /* Style for the list */
       ul {
         list-style-type: none;
         margin: 0 20px;
@@ -10,43 +11,47 @@
         background-color: #ffffff;
       }
 
+      /* Custom font */
+      @font-face {
+        font-family: 'pixel';
+        src: url('pixel.ttf') format('truetype');
+      }
 
-    
-    @font-face {
-      font-family: 'pixel';
-      src: url('pixel.ttf') format('truetype');
-    }
+      /* Style for the title */
+      .title1 {
+        color: #02280b;
+        text-align: center;
+        font-size: 30px;
+        padding: 14px 16px;
+        font-weight: bold;
+        font-variant: italic;
+        font-family: 'pixel', sans-serif;
+      }
 
-    .title1 {
-      color: #02280b;
-      text-align: center;
-      font-size: 30px;
-      padding: 14px 16px;
-      font-weight: bold;
-      font-variant: italic;
-      font-family: 'pixel', sans-serif;
-    }
+      /* Style for maximum width */
+      .max-width {
+        max-width: 100%;
+        max-height: 100vh;
+        margin: auto;
+      }
 
-    .text1{
-      font-size: 15px;
-    }
+      /* Style for list items and links */
+      li a {
+        float: right;
+        display: block;
+        border-radius: 0px;
+        color: rgb(165, 157, 157);
+        font-size: 30px;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+        font-family: 'pixel', sans-serif;
+        margin-right: 20px; 
+      }
 
-    li a {
-      float: right;
-      display: block;
-      border-radius: 0px;
-      color: rgb(165, 157, 157);
-      font-size: 30px;
-      text-align: center;
-      padding: 10px 12px;
-      text-decoration: none;
-      font-family: 'pixel', sans-serif;
-      margin-right: 20px; 
-    }
-
+      /* Hover effect for links */
       li a:hover {
-        background-color:rgb(65, 238, 65);
-        
+        background-color: rgb(65, 238, 65);
         color: rgb(255, 255, 255);
       }
 
@@ -60,7 +65,6 @@
         background-color: #121212;
       }
 
-
       body.dark-mode .title1 {
         color: #ffffff;
       }
@@ -70,10 +74,11 @@
       }
 
       body.dark-mode li a:hover {
-        background-color:rgb(65, 238, 65);
+        background-color: rgb(65, 238, 65);
         color: rgb(255, 255, 255);
       }
 
+      /* Style for the footer */
       footer {
         text-align: center;
         padding: 10px;
@@ -84,6 +89,7 @@
         width: 100%;
       }
 
+      /* Dark mode style for the footer */
       body.dark-mode footer {
         background-color: #121212;
         color: #ffffff;
@@ -94,7 +100,13 @@
     <header>
       <nav>
         <ul>
-          <li style="float: right;"><button id="dark-mode-toggle"><img id="mode-icon" src="night.png" alt="Toggle Dark Mode" style="width: 30px; height: 30px;"></button></li>
+          <!-- Dark mode toggle button -->
+          <li style="float: right;">
+            <button id="dark-mode-toggle">
+              <img id="mode-icon" src="night.png" alt="Toggle Dark Mode" style="width: 30px; height: 30px;">
+            </button>
+          </li>
+          <!-- Navigation links -->
           <li><a href="contact.html">Contact</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
@@ -103,7 +115,7 @@
         </ul>
       </nav>
     </header>
-
+     <!-- Content -->
     <h1 class="title1" style="text-align: left;">ABOUT</h1>
     <pre class="text1" style="text-align: left;"> Hello,
 
@@ -120,12 +132,13 @@
     
     <img src="me.webp" alt="Alex Garns" style="width: 400px; height: 750px; margin-left: 20px; float: right; margin-top: -240px; margin-right: 80px;">
 
-    
+     <!-- Footer  -->
     <footer>
     <p style="text-align: center; font-family: 'pixel', sans-serif;">&copy; 2025 Alex Garns | All rights reserved.</p>
     </footer>
 
     <script>
+            // Toggle dark mode on button click
       const toggleButton = document.getElementById('dark-mode-toggle');
       toggleButton.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
